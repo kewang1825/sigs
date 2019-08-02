@@ -42,7 +42,7 @@ class HttpAction extends AdaptiveCards.Action {
       }
 
       // Check if signal is set, then post the signal after the action is performed
-      RenderAndPostSignal(this.signal);
+      PostSignal(this.signal);
   }
 
   parse(json) {
@@ -65,7 +65,7 @@ class HttpAction extends AdaptiveCards.Action {
 
 AdaptiveCards.AdaptiveCard.actionTypeRegistry.registerType("Action.Http", () => { return new HttpAction(); });
 
-function RenderAndPostSignal(signal) {
+function PostSignal(signal) {
   $('#signal').text(signal);
 
   if (signal != null) {
@@ -100,11 +100,7 @@ function ShowCard(card) {
 
   // Set the adaptive card's event handlers. onExecuteAction is invoked
   // whenever an action is clicked in the card
-  adaptiveCard.onExecuteAction = function (action) {
-      // Check if signal is set for Action.Submit, then post the signal after the action is performed
-      var signal = action.data == null ? null : action.data["signal"];
-      RenderAndPostSignal(signal);
-  };
+  adaptiveCard.onExecuteAction = function (action) {};
 
   // Parse the card payload
   adaptiveCard.parse(card);
@@ -158,7 +154,7 @@ Office.onReady(info => {
     // Author a card
     // In practice you'll probably get this from a service
     // see http://adaptivecards.io/samples/ for inspiration
-    var card = {
+    var myCard = {
       "type": "AdaptiveCard",
       "version": "1.0",
       "body": [
@@ -219,6 +215,6 @@ Office.onReady(info => {
       ]
     };
 
-    document.getElementById('adaptivecards').appendChild(ShowCard(card));
+    document.getElementById('adaptivecards').appendChild(ShowCard(myCard));
   }
 });
