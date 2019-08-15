@@ -43,7 +43,7 @@ class HttpAction extends AdaptiveCards.Action {
   
     postSignal(signal) {
       if (signal != null) {
-          $.post('/api/postsignal?signal=' + signal);
+          $.post('https://sigs-dev-app.azurewebsites.net/api/postsignal?signal=' + signal);
       }
     }
     
