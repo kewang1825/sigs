@@ -39,69 +39,6 @@ const GitHubRepositoryAttachment = props => (
     </div>
 );
 
-const myCard = (
-    <MyAdaptiveCard payload={{
-        "type": "AdaptiveCard",
-        "version": "1.0",
-        "body": [
-            {
-                "type": "Image",
-                "url": "http://adaptivecards.io/content/adaptive-card-50.png"
-            },
-            {
-                "type": "TextBlock",
-                "text": "Hello **Adaptive Cards!**"
-            }
-        ],
-        "actions": [
-            {
-                "type": "Action.Http",
-                "title": "Get Signals",
-                "method": "GET",
-                "url": "https://sigs-dev-app.azurewebsites.net/api/getsignals"
-            },
-            {
-                "type": "Action.Http",
-                "title": "Learn more",
-                "url": "https://aka.ms/sigs",
-                "signal": "BrowserUsage"
-            },
-            {
-                "type": "Action.Http",
-                "title": "Open the App",
-                "signal": "AppUsage"
-            },
-            {
-                "type": "Action.ShowCard",
-                "title": "Comment",
-                "card": {
-                    "type": "AdaptiveCard",
-                    "body": [
-                        {
-                            "type": "Input.Text",
-                            "id": "comment",
-                            "isMultiline": true,
-                            "placeholder": "Enter your comment"
-                        },
-                        {
-                            "type": "ActionSet",
-                            "spacing": "small",
-                            "actions": [
-                                {
-                                    "type": "Action.Http",
-                                    "signal": "CommentAdded",
-                                    "title": "OK",
-                                    "url": "https://messagecardplaygroundfn.azurewebsites.net/api/HttpPost?code=zJaYHdG4dZdPK0GTymwYzpaCtcPAPec8fTvc2flJRvahwigYWg3p0A==&message=The comment was added successfully"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        ]
-    }} />
-);
-
 // Creating a new middleware pipeline that will render <GitHubRepositoryAttachment> for specific type of attachment
 const attachmentMiddleware = () => next => card => {
     switch (card.attachment.contentType) {
@@ -110,9 +47,11 @@ const attachmentMiddleware = () => next => card => {
                 <GitHubRepositoryAttachment owner={card.attachment.content.owner} repo={card.attachment.content.repo} />
             );
 
-        case 'application/vnd.microsoft.card.adaptive':
-            console.log(JSON.stringify(card.attachment.content, null, 2));
-            return myCard;
+        case 'application/vnd.microsoft.card.adaptive.my':
+            //console.log(JSON.stringify(card.attachment.content, null, 2));
+            return (
+                <MyAdaptiveCard payload={card.attachment.content} />
+            );
 
         default:
             return next(card);
