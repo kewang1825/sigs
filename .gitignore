@@ -1,0 +1,8 @@
+node_modules
+lib
+.env
+.eslintrc.js
+dist
+.DS_Store
+.vscode
+*.pyc
