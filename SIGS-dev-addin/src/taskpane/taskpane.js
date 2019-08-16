@@ -1,6 +1,25 @@
-function SigsHeader() {
-  var token = 'eyJ0eXAiOiJKV1QiLCJub25jZSI6InFRTktDZUlKZ3J6RmdpUTVNYUo4RjB6OHJRZmk1eGo4M1hfbHh1Q1BaazQiLCJhbGciOiJSUzI1NiIsIng1dCI6ImllX3FXQ1hoWHh0MXpJRXN1NGM3YWNRVkduNCIsImtpZCI6ImllX3FXQ1hoWHh0MXpJRXN1NGM3YWNRVkduNCJ9.eyJhdWQiOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0Ny8iLCJpYXQiOjE1NjU5Mjc5NTcsIm5iZiI6MTU2NTkyNzk1NywiZXhwIjoxNTY1OTMxODU3LCJhY2N0IjowLCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOE1BQUFBRkFBVjBYUm4rcFRMNlpCSFFmaGZiYk1NTm9KQm1sVkdCaU52YWVFb3g4M3RwSzhQRjFRbHN4U2VETHA4b0RBbmVZbFN4TjhhTTh4SnROV2FTR042MDFMZDdrZEczKzhpdnUwVXJ6NDAwcFk9IiwiYW1yIjpbInB3ZCIsIm1mYSJdLCJhcHBfZGlzcGxheW5hbWUiOiJTSUdTLWRldi1hcHAiLCJhcHBpZCI6IjIwMTkzZGNkLTEwYzYtNGYwMC1hZTY3LTIxODY2NWNiMTBhNiIsImFwcGlkYWNyIjoiMSIsImRldmljZWlkIjoiMDdmYTk0MGMtODM1OC00NzU4LTg1NGUtMWFlNGEyN2Y1YmYzIiwiZW5mcG9saWRzIjpbXSwiZmFtaWx5X25hbWUiOiJXYW5nIiwiZ2l2ZW5fbmFtZSI6IktlIiwiaXBhZGRyIjoiNTAuMzUuNzYuMTYzIiwibmFtZSI6IktlIFdhbmciLCJvaWQiOiJmODkyOTFiNi1kYTM3LTQ3YjItYTk3Ni1mY2ViZjY4ODZmMGQiLCJvbnByZW1fc2lkIjoiUy0xLTUtMjEtMjEyNzUyMTE4NC0xNjA0MDEyOTIwLTE4ODc5Mjc1MjctMzYxMDQyNyIsInB1aWQiOiIxMDAzMDAwMDgwMDZCREE3IiwicmgiOiJJIiwic2NwIjoiU2lnbmFscy5SZWFkIFNpZ25hbHMuUmVhZFdyaXRlIFNpZ25hbHMtQ29ydGFuYS5SZWFkIFNpZ25hbHMtQ29ydGFuYS5SZWFkV3JpdGUgU2lnbmFscy1JbnRlcm5hbC5SZWFkIFNpZ25hbHMtSW50ZXJuYWwuUmVhZC5TaGFyZWQgU2lnbmFscy1JbnRlcm5hbC5SZWFkV3JpdGUgU2lnbmFscy1JbnRlcm5hbC5SZWFkV3JpdGUuU2hhcmVkIFNpZ25hbHMtV2luZG93cy5SZWFkIFNpZ25hbHMtV2luZG93cy5SZWFkV3JpdGUgVXNlci5SZWFkIiwic2lkIjoiM2UwNTVhZjgtNzA4OS00YTRmLWE1ZTgtMzg4MDBiM2M4MTFjIiwic2lnbmluX3N0YXRlIjpbImR2Y19tbmdkIiwiZHZjX2NtcCIsImttc2kiXSwic3ViIjoiRkl2YnVtTmNTM1AyUnZITThsVmVXczRYeUpwYnpmUW03Rnh6M05tQVBTSSIsInRpZCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsInVuaXF1ZV9uYW1lIjoia2V3YW5nQG1pY3Jvc29mdC5jb20iLCJ1cG4iOiJrZXdhbmdAbWljcm9zb2Z0LmNvbSIsInV0aSI6Ik1PNHRFaGRGejBtZWgwTVQ3VVVGQUEiLCJ2ZXIiOiIxLjAifQ.aOIWlwOpdYYoiL-ragR3K4bhp54yyqbFZUFYrnpejuBiCl8-kz-k8rwolzDlzdOLy0td9Jw9XoOY_5knv0OCMsI1wFNKFkuHr2HU4YKibaz58JFKO7urA92lpcJW5Lg8aDGpXeMxkP8RMHzu6PbJ2-Rbp0PrGorGVTNvFTT2eJdJO_O9X04ARo6WgjK-srNMPrjZN_4MRLe5L_crRYFTOeuWwSS9M-KIPAEsoh0b_33CCXsE8g9hoUY2dmJNsK-JslE9YqQLsal7dHpiDADJXS9-J9G1Cn0NbWrs-EIAUFUzxljz4dnuHjY_BazglEMbUmzLyXFC9bXhk-fY0NpPOQ';
-  return 'Bearer ' + token;
+const SIGS_TOKEN = 'Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IlZFbVZoR25TSWxMM3RQalNOb3VvN1RoMGdhUVk4bGQ3NHlvb1hJSmM2TW8iLCJhbGciOiJSUzI1NiIsIng1dCI6ImllX3FXQ1hoWHh0MXpJRXN1NGM3YWNRVkduNCIsImtpZCI6ImllX3FXQ1hoWHh0MXpJRXN1NGM3YWNRVkduNCJ9.eyJhdWQiOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0Ny8iLCJpYXQiOjE1NjU5MzI3MDcsIm5iZiI6MTU2NTkzMjcwNywiZXhwIjoxNTY1OTM2NjA3LCJhY2N0IjowLCJhY3IiOiIxIiwiYWlvIjoiQVZRQXEvOE1BQUFBN0UwQnFoMjdzWjh1WWU5a05KWVBtZjRWZ3lXa2I3QW1NdElUbEdJcG9pVVNrSmpBUFRETitSSFV6WjI2dkJmak9tWmR2RTRLd3V1NTVOeUZ6dG9RbDE4S25LR2pLTXUwVFI3K2s0eVRGVFk9IiwiYW1yIjpbInB3ZCIsIm1mYSJdLCJhcHBfZGlzcGxheW5hbWUiOiJTSUdTLWRldi1hcHAiLCJhcHBpZCI6IjIwMTkzZGNkLTEwYzYtNGYwMC1hZTY3LTIxODY2NWNiMTBhNiIsImFwcGlkYWNyIjoiMSIsImRldmljZWlkIjoiMDdmYTk0MGMtODM1OC00NzU4LTg1NGUtMWFlNGEyN2Y1YmYzIiwiZW5mcG9saWRzIjpbXSwiZmFtaWx5X25hbWUiOiJXYW5nIiwiZ2l2ZW5fbmFtZSI6IktlIiwiaXBhZGRyIjoiNTAuMzUuNzYuMTYzIiwibmFtZSI6IktlIFdhbmciLCJvaWQiOiJmODkyOTFiNi1kYTM3LTQ3YjItYTk3Ni1mY2ViZjY4ODZmMGQiLCJvbnByZW1fc2lkIjoiUy0xLTUtMjEtMjEyNzUyMTE4NC0xNjA0MDEyOTIwLTE4ODc5Mjc1MjctMzYxMDQyNyIsInB1aWQiOiIxMDAzMDAwMDgwMDZCREE3IiwicmgiOiJJIiwic2NwIjoiU2lnbmFscy5SZWFkIFNpZ25hbHMuUmVhZFdyaXRlIFNpZ25hbHMtQ29ydGFuYS5SZWFkIFNpZ25hbHMtQ29ydGFuYS5SZWFkV3JpdGUgU2lnbmFscy1JbnRlcm5hbC5SZWFkIFNpZ25hbHMtSW50ZXJuYWwuUmVhZC5TaGFyZWQgU2lnbmFscy1JbnRlcm5hbC5SZWFkV3JpdGUgU2lnbmFscy1JbnRlcm5hbC5SZWFkV3JpdGUuU2hhcmVkIFNpZ25hbHMtV2luZG93cy5SZWFkIFNpZ25hbHMtV2luZG93cy5SZWFkV3JpdGUgVXNlci5SZWFkIiwic2lkIjoiM2UwNTVhZjgtNzA4OS00YTRmLWE1ZTgtMzg4MDBiM2M4MTFjIiwic2lnbmluX3N0YXRlIjpbImR2Y19tbmdkIiwiZHZjX2NtcCIsImttc2kiXSwic3ViIjoiRkl2YnVtTmNTM1AyUnZITThsVmVXczRYeUpwYnpmUW03Rnh6M05tQVBTSSIsInRpZCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsInVuaXF1ZV9uYW1lIjoia2V3YW5nQG1pY3Jvc29mdC5jb20iLCJ1cG4iOiJrZXdhbmdAbWljcm9zb2Z0LmNvbSIsInV0aSI6IlFwdGYtMlIwaVVLMlBpQm1KRkFHQUEiLCJ2ZXIiOiIxLjAifQ.HH_99TtflKB9v_yZ_jDrGDq44bgckIbOcV76ZimyW9TAn5K_YV-nj1EsUKAUWMOTNUX_cMsGzqYgL_7LbSJPOEGC-Q8TIz_Amfgt8mDFxtZEieG67KTj6R5tW4UhDHZbcCyCO8Xq7ZbYxrFH3wAeueQTQ3gQ-p82pdEoxQIz2_kVRxZmAcu2PQRvlqBEmwdQ8pbdDE6ewFaPOEL4sP1z3iGP67RG67l9FmaXFf31kM4JgMJyTNkHgrG_nnLEucVUySL8aH5MONLmo38d13QPYSBYsSpK31Y4nLOwPSjAcTrgJmcDfzGb5WaVlgG60lHhlokFGb-CXykxnlHhAMGQqg';
+
+function PostSignal(signal) {
+  $('#signal').text(signal);
+
+  if (signal != null) {
+    $('#result').text('waiting...');
+
+    $.ajax({
+      url: 'https://sigs-dev-app.azurewebsites.net/api/postsignal?signal=' + signal,
+      headers: {
+        'Authorization': SIGS_TOKEN,
+      },
+      type: 'post'
+    }).done(function(data){
+      $('#result').text(data);
+    }).fail(function(error){
+      // Handle error
+      $('#result').text('Failed');
+      $('#error').text(JSON.stringify(error, null, 2));
+    });
+  }
 }
 
 function GetHttp(url) {
@@ -9,7 +28,7 @@ function GetHttp(url) {
   $.ajax({
     url: url,
     headers: {
-      'Authorization': SigsHeader(),
+      'Authorization': SIGS_TOKEN,
     },
     type: "GET",
   }).done(function(data){
@@ -64,28 +83,6 @@ class HttpAction extends AdaptiveCards.Action {
 }
 
 AdaptiveCards.AdaptiveCard.actionTypeRegistry.registerType("Action.Http", () => { return new HttpAction(); });
-
-function PostSignal(signal) {
-  $('#signal').text(signal);
-
-  if (signal != null) {
-    $('#result').text('waiting...');
-
-    $.ajax({
-      url: 'https://sigs-dev-app.azurewebsites.net/api/postsignal?signal=' + signal,
-      headers: {
-        'Authorization': SigsHeader(),
-      },
-      type: 'post'
-    }).done(function(data){
-      $('#result').text(data);
-    }).fail(function(error){
-      // Handle error
-      $('#result').text('Failed');
-      $('#error').text(JSON.stringify(error, null, 2));
-    });
-  }
-}
 
 function ShowCard(card) {
   // Create an AdaptiveCard instance
