@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botframework-webchat": "^4.5.2",
+    "botframework-webchat": "^4.15.6",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "react": "^16.9.0",
