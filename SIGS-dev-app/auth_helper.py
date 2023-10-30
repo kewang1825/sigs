@@ -1,4 +1,4 @@
-from urllib import urlencode
+from urllib.parse import urlencode
 import requests
 from config import client_id, client_secret
 import json
@@ -39,8 +39,8 @@ def get_user_token(redirect_uri, code):
                  }
 
     r = requests.post(token_url, data=post_data)
-    print "POST {0}".format(token_url)
-    print json.dumps(post_data, indent=4)
+    print ("POST {0}".format(token_url))
+    print (json.dumps(post_data, indent=4))
 
     try:
         return r.json()

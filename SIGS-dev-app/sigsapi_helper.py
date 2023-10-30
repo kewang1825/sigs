@@ -17,8 +17,8 @@ def sigs_get_signals(token):
               }
 
     r = requests.get(signals_url, params=params, headers=headers)
-    print "GET {0}".format(r.url)
-    print r.text
+    print ("GET {0}".format(r.url))
+    print (r.text)
 
     try:
         return r.json()
@@ -52,9 +52,9 @@ def sigs_post_signal(token, signal, customproperties=None):
               }
 
     r = requests.post(signals_url, json=post_data, headers=headers)
-    print "POST {0}".format(signals_url)
-    print json.dumps(post_data, indent=4)
-    print r.status_code
+    print ("POST {0}".format(signals_url))
+    print (json.dumps(post_data, indent=4))
+    print (r.status_code)
     return r.text
 
 

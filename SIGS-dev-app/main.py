@@ -34,7 +34,7 @@ def hello():
 
     code = request.args.get('code', '')
     token_response = get_user_token(redirect_url, code)
-    print json.dumps(token_response, indent=4)
+    print (json.dumps(token_response, indent=4))
 
     if 'error' in token_response:
         return 'Error:\n' + token_response['error_description']
@@ -43,10 +43,10 @@ def hello():
 
     try:
         decode = jwt.decode(access_token, verify=False)
-        print "ACCESS_TOKEN"
-        print json.dumps(decode, indent=4)
+        print ("ACCESS_TOKEN")
+        print (json.dumps(decode, indent=4))
     except:
-        print 'Failed to decode the access token'
+        print ('Failed to decode the access token')
 
     session['token'] = access_token
     return redirect(url_for('index'))
@@ -68,8 +68,8 @@ def get_signals():
 
     signals = signals_response['value']
 
-    print "VALUE"
-    print json.dumps(signals, indent=4)
+    print ("VALUE")
+    print (json.dumps(signals, indent=4))
     return jsonify(value = signals)
 
 
