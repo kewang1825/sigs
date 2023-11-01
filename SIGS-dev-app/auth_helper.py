@@ -15,13 +15,14 @@ token_url = '{0}{1}'.format(authority, '/common/oauth2/v2.0/token')
 # The scope to request
 outlook_scope = 'https://outlook.office.com/user.read'
 
-def get_signin_url(redirect_uri):
+def get_signin_url(redirect_uri, state):
     # Build the query parameters for the signin URL.
     params = {'client_id': client_id,
               'redirect_uri': redirect_uri,
               'response_type': 'code',
               'prompt': 'consent',
               'scope': outlook_scope,
+              'state': state,
               }
 
     signin_url = authorize_url.format(urlencode(params))
